@@ -1,0 +1,346 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style-key-entry.css">
+    <link rel="stylesheet" href="css/style-log-table.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <title>Entries Admin-Key Security System</title>
+</head>
+<body>
+    <div class="container-main">
+        <div class="container-background-img">
+            <img class="background-img" src="img\white-background-image1.png">
+            <div id="mySidenav" class="sidenav">
+                <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+                <a href="E:\Key-Security-System\Key-Security-System\log-table.html">Manage Key Entries</a>
+                <a href="E:\Key-Security-System\Key-Security-System\manage-user.html">Manage Users</a>
+                <a href="index.html">Log out</a>
+            </div>
+            <div id="main">
+                <span style="font-size:30px;cursor:pointer" onclick="openNav()">&#9776;</span>
+            </div>
+            <form class="search-container" placeholder="Search" >
+                <input type="text" class="search-bar" placeholder="Search" name="Search">
+                <button type="submit" class="search-button"><i class="fa fa-search"></i></button>
+            </form>
+            <div class="date-filter-box">
+                <div class="date-filter-container1">
+                    <label class="from-date">From </label>
+                    <input type="date" class="date-filter1" max="today"/>
+                </div>
+                <label class="to-date">To </label>
+                <div class="date-filter-container2">
+                    <label class="from-date">From </label>
+                    <input type="date" class="date-filter2" max="today"/>
+                </div> 
+            </div>
+            <div class="container-buttons">
+                <button type="submit" class="container-download-button" onclick="exportData()"><i class="fa fa-download" aria-hidden="true"></i></button>
+                <button type="submit" class="container-add-button" id="add-button" data-modal="modalOne">Add</button>
+                <button type="submit" class="container-update-button" id="update-button" data-modal="modalTwo">Update</button>
+                <button type="submit" class="container-delete-button" id="delete-button" >Delete</button>
+            </div>
+            <div class="container">
+                <table id="key-entry-table">
+                    <thead>
+                        <tr>
+                            <th col-index="1">Sr No</th>
+                            <th col-index="2">Room
+                                <select class="table-filter" onchange="filter_rows()">
+                                    <option value="all"></option>
+                                </select>
+                            </th>
+                            <th col-index="4">Borrower's Name</th>
+                            <th col-index="5">Mobile No.</th>
+                            <th col-index="6">Time In</th>
+                            <th col-index="7">Returner's Name</th>
+                            <th col-index="8">Mobile No.</th>
+                            <th col-index="9">Time Out</th>
+                        </tr>
+                    </thead>
+                    <div>
+                        <tr>
+                            <td>1</td>
+                            <td>302</td>
+                            <td>abc xyz</td>
+                            <td>123456789</td>
+                            <td>03:40 pm</td>
+                            <td>pqr lmn</td>
+                            <td>123456789</td>
+                            <td>06:10 pm</td>
+                        </tr>
+                        <tr>
+                            <td>1</td>
+                            <td>505</td>
+                            <td>abc xyz</td>
+                            <td>123456789</td>
+                            <td>03:40 pm</td>
+                            <td>pqr lmn</td>
+                            <td>123456789</td>
+                            <td>06:10 pm</td>
+                        </tr>
+                        <tr>
+                            <td>1</td>
+                            <td>505</td>
+                            <td>abc xyz</td>
+                            <td>123456789</td>
+                            <td>03:40 pm</td>
+                            <td>pqr lmn</td>
+                            <td>123456789</td>
+                            <td>06:10 pm</td>
+                        </tr>
+                        <tr>
+                            <td>1</td>
+                            <td>505</td>
+                            <td>abc xyz</td>
+                            <td>123456789</td>
+                            <td>03:40 pm</td>
+                            <td>pqr lmn</td>
+                            <td>123456789</td>
+                            <td>06:10 pm</td>
+                        </tr>
+                        <tr>
+                            <td>1</td>
+                            <td>505</td>
+                            <td>abc xyz</td>
+                            <td>123456789</td>
+                            <td>03:40 pm</td>
+                            <td>pqr lmn</td>
+                            <td>123456789</td>
+                            <td>06:10 pm</td>
+                        </tr>
+                        <tr>
+                            <td>1</td>
+                            <td>306</td>
+                            <td>abc xyz</td>
+                            <td>123456789</td>
+                            <td>03:40 pm</td>
+                            <td>pqr lmn</td>
+                            <td>123456789</td>
+                            <td>06:10 pm</td>
+                        </tr>
+                        <tr>
+                            <td>1</td>
+                            <td>306</td>
+                            <td>abc xyz</td>
+                            <td>123456789</td>
+                            <td>03:40 pm</td>
+                            <td>pqr lmn</td>
+                            <td>123456789</td>
+                            <td>06:10 pm</td>
+                        </tr>
+                        <tr>
+                            <td>1</td>
+                            <td>306</td>
+                            <td>abc xyz</td>
+                            <td>123456789</td>
+                            <td>03:40 pm</td>
+                            <td>pqr lmn</td>
+                            <td>123456789</td>
+                            <td>06:10 pm</td>
+                        </tr>
+                        <tr>
+                            <td>1</td>
+                            <td>306</td>
+                            <td>abc xyz</td>
+                            <td>123456789</td>
+                            <td>03:40 pm</td>
+                            <td>pqr lmn</td>
+                            <td>123456789</td>
+                            <td>06:10 pm</td>
+                        </tr>
+                        <tr>
+                            <td>1</td>
+                            <td>306</td>
+                            <td>abc xyz</td>
+                            <td>123456789</td>
+                            <td>03:40 pm</td>
+                            <td>pqr lmn</td>
+                            <td>123456789</td>
+                            <td>06:10 pm</td>
+                        </tr>
+                        <tr>
+                            <td>1</td>
+                            <td>306</td>
+                            <td>abc xyz</td>
+                            <td>123456789</td>
+                            <td>03:40 pm</td>
+                            <td>pqr lmn</td>
+                            <td>123456789</td>
+                            <td>06:10 pm</td>
+                        </tr>
+                        <tr>
+                            <td>1</td>
+                            <td>306</td>
+                            <td>abc xyz</td>
+                            <td>123456789</td>
+                            <td>03:40 pm</td>
+                            <td>pqr lmn</td>
+                            <td>123456789</td>
+                            <td>06:10 pm</td>
+                        </tr>
+                        <tr>
+                            <td>1</td>
+                            <td>306</td>
+                            <td>abc xyz</td>
+                            <td>123456789</td>
+                            <td>03:40 pm</td>
+                            <td>pqr lmn</td>
+                            <td>123456789</td>
+                            <td>06:10 pm</td>
+                        </tr>
+                        <tr>
+                            <td>1</td>
+                            <td>306</td>
+                            <td>abc xyz</td>
+                            <td>123456789</td>
+                            <td>03:40 pm</td>
+                            <td>pqr lmn</td>
+                            <td>123456789</td>
+                            <td>06:10 pm</td>
+                        </tr>
+                        <tr>
+                            <td>1</td>
+                            <td>306</td>
+                            <td>abc xyz</td>
+                            <td>123456789</td>
+                            <td>03:40 pm</td>
+                            <td>pqr lmn</td>
+                            <td>123456789</td>
+                            <td>06:10 pm</td>
+                        </tr>
+                        <div id="modalOne" class="modal">
+                            <div class="modal-content">
+                                <a class="close">&times;</a>
+                                <div class="container-info">
+                                    <h4 class="container-heading">Key Entry</h4>
+                                    <form action="" class="Entry-form">
+                                        <div class="RoomNo">
+                                            <label for="RoomNo" class="RoomNo-label">Room No:</label>
+                                            <input type="text" name="RoomNo" class="RoomNo-input">
+                                        </div>
+                                        <div class="BName">
+                                            <label for="BName"  class="BName-label"></label>Borrower's Name:</label>
+                                            <input type="text" class="BName-input" name="BName">
+                                        </div>
+                                        <div class="BMobile">
+                                            <label for="BMobile" class="BMobile-label">Mobile No:</label>
+                                            <input type="text" class="BMobile-input" name="BMobile" id="">
+                                        </div>
+                                        <div class="TimeIn">
+                                            <label for="TimeIn" class="TimeIn-label">TimeIn:</label>
+                                            <input type="datetime-local" class="TimeIn-input" id="TimeIn" name="TimeIn">
+                                        </div>
+                                        <div class="RName">
+                                            <label for="RName" class="RName-label">Returner's Name:</label>
+                                            <input type="text" class="RName-input" name="RName" id="">
+                                        </div>
+                                        <div class="RMobile">
+                                            <label for="RMobile" class="RMobile-label">Mobile No:</label>
+                                            <input type="text" class="RMobile-input" name="RMobile" id="">
+                                        </div>
+                                        <div class="TimeOut">
+                                            <label for="TimeOut" class="TimeOut-label">TimeOut:</label>
+                                            <input type="datetime-local" class="TimeOut-input" id="TimeOut" name="TimeOut">
+                                        </div>
+                                        <div class="submit-button">
+                                            <input type="submit" class="submit-button-input" value="Submit">
+                                        </div>
+                                    </form>
+                                </div>
+                              </div>
+                            </div>
+                        </div>
+                        <div id="modalTwo" class="modal">
+                            <div class="modal-content">
+                                <a class="close">&times;</a>
+                                <div class="container-info">
+                                    <h4 class="container-heading">Key Entry</h4>
+                                    <form action="" class="Entry-form">
+                                        <div class="RoomNo">
+                                            <label for="RoomNo" class="RoomNo-label">Room No:</label>
+                                            <input type="text" name="RoomNo" class="RoomNo-input">
+                                        </div>
+                                        <div class="BName">
+                                            <label for="BName"  class="BName-label"></label>Borrower's Name:</label>
+                                            <input type="text" class="BName-input" name="BName">
+                                        </div>
+                                        <div class="BMobile">
+                                            <label for="BMobile" class="BMobile-label">Mobile No:</label>
+                                            <input type="text" class="BMobile-input" name="BMobile" id="">
+                                        </div>
+                                        <div class="TimeIn">
+                                            <label for="TimeIn" class="TimeIn-label">TimeIn:</label>
+                                            <input type="datetime-local" class="TimeIn-input" id="TimeIn" name="TimeIn">
+                                        </div>
+                                        <div class="RName">
+                                            <label for="RName" class="RName-label">Returner's Name:</label>
+                                            <input type="text" class="RName-input" name="RName" id="">
+                                        </div>
+                                        <div class="RMobile">
+                                            <label for="RMobile" class="RMobile-label">Mobile No:</label>
+                                            <input type="text" class="RMobile-input" name="RMobile" id="">
+                                        </div>
+                                        <div class="TimeOut">
+                                            <label for="TimeOut" class="TimeOut-label">TimeOut:</label>
+                                            <input type="datetime-local" class="TimeOut-input" id="TimeOut" name="TimeOut">
+                                        </div>
+                                        <div class="submit-button">
+                                            <input type="submit" class="submit-button-input" value="Submit">
+                                        </div>
+                                    </form>
+                                </div>
+                              </div>
+                            </div>
+                        </div>
+
+                    </tbody>
+                </table>
+            </div>
+        </div>
+        <script>
+        //Navbar Code
+        function openNav() {
+          document.getElementById("mySidenav").style.width = "250px";
+        }
+        
+        function closeNav() {
+          document.getElementById("mySidenav").style.width = "0";
+        }
+
+        //Add button popup code
+        let modalBtns = [...document.querySelectorAll(".container-add-button")];
+      modalBtns.forEach(function (btn) {
+        btn.onclick = function () {
+          let modal = btn.getAttribute("data-modal");
+          document.getElementById(modal).style.display = "block";
+        };
+      });
+      let closeBtns = [...document.querySelectorAll(".close")];
+      closeBtns.forEach(function (btn) {
+        btn.onclick = function () {
+          let modal = btn.closest(".modal");
+          modal.style.display = "none";
+        };
+      });
+      window.onclick = function (event) {
+        if (event.target.className === "modal") {
+          event.target.style.display = "none";
+        }
+      };
+    </script>
+    <script src = "js/download.js"></script>
+    
+    <script src="js\keyentry.js">
+        window.onload = () => {
+            console.log(document.querySelector("#key-entry-table > tbody > tr:nth-child(2) > td:nth-child(3) ").innerHTML);
+        };
+
+        getUniqueValuesFromColumn()
+    </script>
+
+</body>
+</html>

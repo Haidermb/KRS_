@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Page</title>
+    <link rel="stylesheet" href="css/style-admin.css">
+</head>
+<body>
+    <div class="container-main">
+        <div class="container-background-img">
+            <img src="img\white-background-image1.png" class="background-img">
+            <div id="mySidenav" class="sidenav">
+                <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+                <a href="E:\Key-Security-System\Key-Security-System\log-table.html">Manage Key Entries</a>
+                <a href="E:\Key-Security-System\Key-Security-System\manage-user.html">Manage Users</a>
+                <!-- <button type="submit" class="container-logout-button"> -->
+                <a href="index.html">Log out</a>
+                <!-- </button> -->
+            </div>
+            <div id="main">
+                <span style="font-size:30px;cursor:pointer" onclick="openNav()">&#9776;</span>
+            </div>
+            <div class="container">
+                <!-- <div class="container-partition-line">
+                </div>
+                <div class="container-info">
+                    <h4 class="container-heading">ADMIN VIEW</h4>
+                    <form action="" class="Entry-form">
+                        <div class="RoomNo">
+                            <label for="RoomNo" class="RoomNo-label">Room No:</label>
+                            <input type="text" name="RoomNo" class="RoomNo-input">
+                        </div>
+                        <div class="BName">
+                            <label for="BName"  class="BName-label"></label>Borrower's Name:</label>
+                            <input type="text" class="BName-input" name="BName">
+                        </div>
+                        <div class="BMobile">
+                            <label for="BMobile" class="BMobile-label">Mobile No:</label>
+                            <input type="text" class="BMobile-input" name="BMobile" id="">
+                        </div>
+                        <div class="TimeIn">
+                            <label for="TimeIn" class="TimeIn-label">TimeIn:</label>
+                            <input type="datetime-local" class="TimeIn-input" id="TimeIn" name="TimeIn">
+                        </div>
+                        <div class="RName">
+                            <label for="RName" class="RName-label">Returner's Name:</label>
+                            <input type="text" class="RName-input" name="RName" id="">
+                        </div>
+                        <div class="RMobile">
+                            <label for="RMobile" class="RMobile-label">Mobile No:</label>
+                            <input type="text" class="RMobile-input" name="RMobile" id="">
+                        </div>
+                        <div class="TimeOut">
+                            <label for="TimeOut" class="TimeOut-label">TimeOut:</label>
+                            <input type="datetime-local" class="TimeOut-input" id="TimeOut" name="TimeOut">
+                        </div>
+                        <div class="submit-button">
+                            <input type="submit" class="submit-button-input" value="Submit">
+                        </div>
+                    </form>
+                </div> -->
+            </div>
+        </div>
+    </div>
+        
+    </div>
+    <script>
+        function openNav() {
+          document.getElementById("mySidenav").style.width = "250px";
+          document.getElementById("main").style.marginLeft = "250px";
+        }
+        
+        function closeNav() {
+          document.getElementById("mySidenav").style.width = "0";
+          document.getElementById("main").style.marginLeft= "0";
+        }
+    </script>
+</body>
+</html>

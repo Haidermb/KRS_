@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="/static/style-lp.css">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+        <link href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@300;400;500&amp;display=swap" rel="stylesheet">
+        <title>Login-Key Security System</title>
+    </head>
+    <body>
+
+        <div> 
+            {% with m = get_flashed_messages(with_categories = true)%}
+            {% if m %}
+                {%for cag , x in m %}
+                     <p style="padding: 3px; color: white;background: rgb(249, 118, 118);text-align: center;">{{x}}</p>
+                     {%endfor%}
+                     {%endif%}
+                     {%endwith%}
+        </div>    
+    <div class="container-main">
+        <div class="container-background-img">
+            <img src="/static/img/white-background-image1 (1).png" class="background-img">
+            
+            <div class="">
+                <form   method="post">
+                    <div class="container" id="container1">
+                        <div class="container-img">
+                                <img src="/static/img/Somaiya_Logo1-no background (1).png" alt="somaiya logo" somaiya_logo="">
+                        </div>
+                        <div class="container-partition-line">
+                        </div>
+                        <div class="container-info">
+                            <h4 class="container-heading">USER LOGIN</h4>
+
+                            {{form.hidden_tag()}}
+
+                            {{form.username.label(class = "container-label-username")}}
+                            {{form.username(class="container-textbox-username",placeholder = "Enter Username")}}
+                            
+                            {{form.password1.label(class="container-label-password")}}
+                            {{form.password1(class="container-textbox-password" ,placeholder='Enter Password')}}
+                            <div class="container-save-forget-password">
+                                <input type="checkbox" class="container-checkbox" checked="checked"> 
+                                <p class="container-remember-me">Remember Me</p>
+                                <a href="#" class="container-link">Forget Password?</a>
+                            </div>
+                            <!-- {{form.submit(class="container-submit-button")}}
+                             -->
+                            <button type="submit" class="container-submit-button">Login</button>                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    </body>
+</html>

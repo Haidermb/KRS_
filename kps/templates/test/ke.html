@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href='/static/log.css' />
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+    <link srel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <title>Entries-Key Security System</title>
+</head>
+<body>
+    
+    <div class="container-main">
+        <div class="container-background-img">
+            sb<img class="background-img" src="/kps/static/img/white-background-image.png">
+            <form class="search-container" placeholder="Search" >
+                <input type="text" class="search-bar" placeholder="Search" name="Search">
+                <button type="submit" class="search-button"><i class="fa fa-search"></i></button>
+            </form>
+            <div class="date-filter-container">Date
+                <select class="date-filter" onchange="filter_rows()">
+                </select>
+            </div> 
+            <div class="container">
+                <table id="key-entry-table">
+                    <thead>
+                        <tr>
+                            <th col-index="1">Sr No</th>
+                            <th col-index="2">Room
+                                <select class="table-filter" onchange="filter_rows()">
+                                    <option value="all"></option>
+                                </select>
+                            </th>
+                            <!-- <th col-index="3">Date
+                                <select class="table-filter" onchange="filter_rows()">
+                                    <option value="all"></option>
+                                </select>
+                            </th> -->
+                            <th col-index="4">Borrower's Name</th>
+                            <th col-index="5">Mobile No.</th>
+                            <th col-index="6">Time In</th>
+                            <th col-index="7">Returner's Name</th>
+                            <th col-index="8">Mobile No.</th>
+                            <th col-index="9">Time Out</th>
+                        </tr>
+                    </thead>
+                        {% for x in b %}
+                        <tr>
+                        <td>{{x.SRNO}}</td>   
+                        <td>{{ x.Room}}</td>
+                        <td>{{ x.Bname }}</td>
+                        <td>{{ x.Mobile }}</td>
+                        <td>{{ x.TimeIn }}</td>
+                        <td>{{ x.Rname }}</td>
+                        <td>{{ x.rvm }}</td>
+                        <td>{{ x.TimeOut }}</td>
+                            
+                    </tr>  
+                     
+                    {% endfor %} 
+                </table>
+            </div>
+            <div class="container-buttons">
+                    <button type="submit" class="container-logout-button"><a href="index.html"><i class="fa fa-sign-out"></i></a></button>
+                    <button type="submit" class="container-download-button" onclick="exportData()"><i class="fa fa-download" aria-hidden="true"></i></button>
+                    <!-- <button type="submit" class="container-update-button" id="update-button" >Update</button>
+                    <button type="submit" class="container-save-button">Save</button> -->
+            </div>
+    </div>
+    <script src = "js/download.js"></script>
+    
+    <script src="js\keyentry.js">
+        window.onload = () => {
+            console.log(document.querySelector("#key-entry-table > tbody > tr:nth-child(2) > td:nth-child(3) ").innerHTML);
+        };
+        
+        getUniqueValuesFromColumn()
+        </script>
+
+</div>
+</body>
+
+</html>

@@ -1,0 +1,34 @@
+{%extends 'base.html'%}
+{%block title%}
+    Login Page
+{%endblock%}
+         
+{%block form%}
+{% with m = get_flashed_messages(with_categories = true)%}
+        {% if m %}
+            {%for cag , x in m %}
+                 <p style="padding: 3px; color: white;background: rgb(249, 118, 118);text-align: center;">{{x}}</p>
+                 {%endfor%}
+                 {%endif%}
+                 {%endwith%}
+<br>
+<h2 style="text-align: center ;">User Login Page</h2>
+<br>
+<br>
+    <form method="post" style="display: flex;flex-direction: column;align-items: center;">
+        {{form.hidden_tag()}}
+        {{form.username.label}}
+        {{form.username(placeholder = "User Name")}}
+        
+        {{form.password1.label()}}
+        {{form.password1(placeholder='Create Password')}}
+    
+    <div style="text-align: center ;">
+        <p>Do not have an account ?</p>
+        <a href="{{url_for('register')}}">Register</a>
+    </div>    
+    
+    {{form.submit(placeholder ="Sign In")}}
+    
+    </form>
+{%endblock%}

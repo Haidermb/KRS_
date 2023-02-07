@@ -1,0 +1,44 @@
+{%extends 'base.html'%}
+{%block title%}
+    Register Page
+{%endblock%}
+{%block form%}
+<div> 
+        {% with m = get_flashed_messages(with_categories = true)%}
+        {% if m %}
+            {%for cag , x in m %}
+                 <p style="padding: 3px; color: white;background: rgb(249, 118, 118);text-align: center;">{{x}}</p>
+        <!-- <div class="alert alert-{{cag}} ">
+                <button type="button" class="m1-2 mb-1 close"  data-dismiss="alert" aria-label="Close">
+                <span aria-hidden="true">&times;</span>                
+                </button>
+                {{x}}
+        </div> -->
+        {%endfor%}
+        {%endif%}
+        {%endwith%}
+    </div>
+    <br>
+    <br>
+    <br>
+    <div>
+    <form  method="POST", style="display: flex;flex-direction: column;align-items: center;">
+        {{form.hidden_tag()}}
+        {{form.username.label()}}
+        {{form.username(placeholder='User Name')}}
+        
+        {{form.email.label()}}
+        {{form.email(placeholder='Email')}}
+        
+        {{form.password1.label()}}
+        {{form.password1(placeholder='Create Password')}}
+        
+        {{form.password2.label()}}
+        {{form.password2(placeholder='Confirm Password')}}
+
+        <br>
+        {{form.submit(placeholder='Create Account')}}
+
+    </form>
+</div>
+{%endblock%}

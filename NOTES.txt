@@ -1,0 +1,56 @@
+USER DASBOARD
+
+The User Dasboard has only one route 
+
+The route contain the following Features
+
+1) Search Bar
+2) Date Filter
+3) Download Button
+4) LogOut Button
+
+1) Search Bar : use for particular search for a key or name for the current display entries of the log table.
+2) Date filter : for fetching data from log table for a particular date . By Default the date is set to Todays date.
+Thus  when a user login in , the dasboard will have entries of Todays date only 
+the user can select a different date by changing the date using date filter 
+ 
+3)Download Button : To download the the currently displayed data in excel
+
+4) Logout Button : To logout session for the currently logged in user and redirect to login page
+
+
+
+
+ ADMIN DASBOARD
+
+Admin Contain 2 routes 
+1) Manage Key Entries  
+2) Manage Users 
+
+Manage Key Entries Contain the Following Features 
+
+1)Date Filter
+2) Download Button 
+3) Add Button 
+4) Update Button
+5) Delete Button
+
+3) Add Button : Use to add new entires into the log table manually
+     Functionality : On clicking a form will pop up in the current tab only 
+	             The Form will contain 2 input tab keyid and userid and a save button 
+	              on  saving the form the keyid and userid is checked and a new row is created in the log table 
+
+4) Update Button : Use to update Keyid , userid of a particular row
+     Functionality : first we have to select a row and than click on the update button a form will popup containing keyid,uid and timein and timeout of the selected row now we can change the data and click on     save to update the data in the row
+5) Delete Button : Use to delete the the selected row from log (view) table 
+
+
+	
+ 	 
+	             	 
+			  
+ 
+ 
+
+
+		

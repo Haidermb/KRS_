@@ -1,0 +1,371 @@
+body {
+    position: absolute;
+    width: auto;
+    height: auto;
+    left: 0px;
+    top: 0px;
+    background-color: #990606;
+    font-family: "Roboto Slab", serif;
+    margin: 0px;
+}
+
+.container-main {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    margin: 0px;
+
+}
+
+.background-img {
+    object-fit: fill;
+    width: 71.1rem;
+    height: 31.83rem;
+}
+
+.container-background-img {
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background: no-repeat center fixed; 
+    background-size: cover;
+    background: linear-gradient(rgba(0, 0, 0, 0.50), rgba(0, 0, 0, 0.50));
+}
+
+.container {
+    position: absolute;
+    width: 50rem;
+    height: 23rem;
+    left: 190px;
+    top: 110px;
+    box-sizing: border-box;
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 4px 4px 0px;
+    background: rgba(255, 255, 255, 0.473);
+    border-width: 1px;
+    border-style: solid;
+    border-color: rgba(177, 173, 173, 0.8);
+    border-image: initial;
+    border-radius: 15px;
+    opacity: 1;
+}
+
+.container-img {
+    position: absolute;
+    width: 300px;
+    height: 250px;
+    left: 60px;
+    top: 100px;
+}
+
+.container-partition-line {
+    position: absolute;
+    top: 150px;
+    margin-left: 450px;
+    width: 2px;
+    height: 200px;
+    background-color: #A81E1C;
+    border-radius: 15px;
+}
+
+.container-info {
+    margin-left: 200px;
+    width: 500px;
+    height: 360px;
+    padding: 20px;
+}
+
+.container-heading {
+    position: absolute;
+    width: 400px;
+    height: 40px;
+    left: 250px;
+    top: 40px;
+    font-size: 28px;
+    line-height: 30px;
+    text-align: center;
+    color: #A81E1C;
+    font-family: "Roboto Slab", serif;
+    margin: 0px;
+    opacity: 1;
+}
+
+.RoomNo {
+    position: absolute;
+    width: 250px;
+    height: 50px;
+    left: 20px;
+    top: 120px;
+    padding: 2px;
+}
+
+.RoomNo-label {
+    position: absolute;
+    padding: 5px;
+}
+
+.RoomNo-input {
+    position: absolute;
+    left: 150px;
+    padding: 5px;
+}
+
+
+.BName {
+    position: absolute;
+    width: 250px;
+    height: 50px;
+    left: 20px;
+    top: 180px;
+    padding: 2px;
+}
+
+.BName-label {
+    position: absolute;
+    left: 20px; 
+    padding: 5px;
+}
+
+.BName-input {
+    position: absolute;
+    left: 150px;
+    padding: 5px;
+}
+
+.BMobile {
+    position: absolute;
+    width: 250px;
+    height: 50px;
+    left: 20px;
+    top: 230px;
+    padding: 2px;
+}
+
+.BMobile-label {
+    position: absolute;
+    /* left: 20px;  */
+    padding: 5px;
+}
+
+.BMobile-input {
+    position: absolute;
+    left: 150px;
+    padding: 5px;
+}
+
+.TimeIn {
+    position: absolute;
+    width: 250px;
+    height: 50px;
+    left: 20px;
+    top: 280px;
+    padding: 2px;
+}
+
+.TimeIn-label {
+    position: absolute;
+    /* left: 20px; */
+    padding: 5px;
+}
+
+.TimeIn-input {
+    position: absolute;
+    left: 150px;
+    padding: 5px;
+}
+
+.RName {
+    position: absolute;
+    width: 250px;
+    height: 50px;
+    left: 460px;
+    top: 180px;
+    padding: 2px;
+}
+
+.RName-label {
+    position: absolute;
+    left: 20px;
+    padding: 5px;
+}
+
+.RName-input {
+    position: absolute;
+    left: 170px;
+    padding: 5px;
+}
+
+.RMobile {
+    position: absolute;
+    width: 250px;
+    height: 50px;
+    left: 460px;
+    top: 230px;
+    padding: 2px;
+}
+
+.RMobile-label {
+    position: absolute;
+    left: 20px; 
+    padding: 5px;
+}
+
+.RMobile-input {
+    position: absolute;
+    left: 170px;
+    padding: 5px;
+}
+
+.TimeOut {
+    position: absolute;
+    width: 250px;
+    height: 50px;
+    left: 460px;
+    top: 280px;
+    padding: 2px;
+}
+
+.TimeOut-label {
+    position: absolute;
+    left: 20px;
+    padding: 5px;
+}
+
+.TimeOut-input {
+    position: absolute;
+    left: 170px;
+    padding: 5px;
+}
+
+input[type=label] {
+    font-size: 20px;
+    line-height: 20px;
+    text-align: center;
+    color: #121619;
+}
+
+input[type=text] {
+    position: absolute;
+    width: 150px;
+    height: 20px;
+    box-sizing: border-box;
+    font-family: "Roboto Slab", serif;
+    background: rgb(255, 255, 255);
+    border-width: 1px;
+    border-style: solid;
+    border-color: #121619;
+    border-image: initial;
+    border-radius: 5px;
+    color: #121619;
+    padding: 2px;
+}
+
+input[type=text]:hover {
+    border-color: #990606;
+}
+
+input[type=text]:focus {
+    outline: none;
+    border-color: #990606;
+    border-width: 1.5px;
+}
+
+input[type=datetime-local] {
+    position: absolute;
+    width: 150px;
+    height: 20px;
+    box-sizing: border-box;
+    font-family: "Roboto Slab", serif;
+    background: rgb(255, 255, 255);
+    border-width: 1px;
+    border-style: solid;
+    border-color: #121619;
+    border-image: initial;
+    border-radius: 5px;
+    color: #121619;
+    padding: 2px;
+}
+
+input[type=datetime-local]:hover {
+    border-color: #990606;
+}
+
+input[type=datetime-local]:focus {
+    outline: none;
+    border-color: #990606;
+    border-width: 1.5px;
+}
+
+.submit-button-input {
+    position: absolute;
+    width: 150px;
+    height: 25px;
+    left: 630px;
+    top: 360px;
+    box-sizing: border-box;
+    box-shadow: rgb(75, 75, 75) 0px 2px 2px 0px;
+    color: rgb(255, 255, 255);
+    font-size: 18px;
+    text-align: center;
+    font-family: "Roboto Slab", serif;
+    background: #121619;
+    border-width: 1px;
+    border-style: solid;
+    border-color: rgb(75, 75, 75);
+    border-image: initial;
+    border-radius: 5px;
+}
+
+.submit-button-input:hover {
+    background: #A81E1C;
+    border-color: #990606;
+}
+
+.sidenav {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-color: #111;
+    overflow-x: hidden;
+    transition: 0.5s;
+    padding-top: 60px;
+  }
+  
+  .sidenav a {
+    padding: 8px 8px 8px 32px;
+    text-decoration: none;
+    font-size: 25px;
+    color: #818181;
+    display: block;
+    transition: 0.3s;
+  }
+  
+  .sidenav a:hover {
+    color: #f1f1f1;
+  }
+  
+  .sidenav .closebtn {
+    position: absolute;
+    top: 0;
+    right: 25px;
+    font-size: 36px;
+    margin-left: 50px;
+  }
+  
+  #main {
+    position: absolute;
+    width: 50rem;
+    height: 23rem;
+    left: 50px;
+    top: 30px;
+    box-sizing: border-box;
+    transition: margin-left .5s;
+    padding: 16px;
+  }
+  
+  /* @media screen and (max-height: 450px) {
+    .sidenav {padding-top: 15px;}
+    .sidenav a {font-size: 18px;}
+  } */

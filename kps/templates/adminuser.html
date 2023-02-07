@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/static/style-key-entry.css">
+    <link rel="stylesheet" href="/static/style-manage-users.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <title>Manage Users-Key Security System</title>
+</head>
+<body>
+    <div class="container-main">
+        <div class="container-background-img">
+            <img class="background-img" src="/static/img/white-background-image (1).png">
+            <div id="mySidenav" class="sidenav">
+                <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+                <a href="{{url_for('adminlog')}}">Manage Key Entries</a>
+                <a href="{{url_for('adminuser')}}">Manage Users</a>
+                <!-- <button type="submit" class="container-logout-button"> -->
+                <a href="{{url_for('ulogout')}}">Log out</a>
+                <!-- </button> -->
+            </div>
+            <div id="main">
+                <span style="font-size:30px;cursor:pointer" onclick="openNav()">&#9776;</span>
+            </div>
+            <form class="search-container" placeholder="Search" >
+                <input type="text" class="search-bar" placeholder="Search" name="Search">
+                <button type="submit" class="search-button"><i class="fa fa-search"></i></button>
+            </form>
+            <div class="container">
+                
+                <table id="key-entry-table">
+                    <thead>
+                        <tr>
+                            <th col-index="1">SRNO</th>
+                            <th col-index="2">User Name</th>
+                            <th col-index="3">Email</th>
+                            <th col-index="4">Mobile No</th>
+                            <th col-index="4">Type</th>
+                        </tr>
+                    </thead>  
+                    {% set count = namespace(value=1) %}
+
+                    {% for x in b %}
+                    <tr>
+                    <td>  {{ count.value }}</td>   
+
+                    <td>{{x.username}}</td>   
+                    <td>{{x.email}}</td>
+                    <td>{{x.mob}}</td>
+
+                    <td>
+                        {% if aa %}
+                        {{c}}
+                        {% else %}
+                        {{cc}}
+                        {% endif %}
+                           
+                    </td>
+                    {% set count.value = count.value + 1 %}
+
+                    {%endfor%}
+                </table>
+            </div>
+            <div class="container-buttons">
+                    <button type="submit" class="container-add-button" id="add-button" >Add</button>
+                    <button type="submit" class="container-update-button" id="update-button" >Update</button>
+                    <button type="submit" class="container-delete-button" id="delete-button" >Delete</button>
+            </div>
+    </div>
+    <script>
+        function openNav() {
+          document.getElementById("mySidenav").style.width = "250px";
+        }
+        
+        function closeNav() {
+          document.getElementById("mySidenav").style.width = "0";
+        }
+    </script>
+    <script src = "/static/download.js"></script>
+    
+    <script src="/static/keyentry.js">
+        window.onload = () => {
+            console.log(document.querySelector("#key-entry-table > tbody > tr:nth-child(2) > td:nth-child(3) ").innerHTML);
+        };
+
+        getUniqueValuesFromColumn()
+    </script>
+
+</div></body></html>
